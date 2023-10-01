@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:44:47 by vcacador          #+#    #+#             */
-/*   Updated: 2023/09/25 15:13:29 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/10/01 15:15:12 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,13 @@ void	*f_thread_runs(void *ola)
 	philo()[0][i].last_meal = time_now();
 	philo()[0][i].eat_t = 0;
 	if (i % 2 == 0)
+	{
+		if (i + 1 == utils()->n_f)
+			think(i);
+		if (eat(i))
+			return (NULL);
+	}
+	if (i % 2 != 0)
 	{
 		if (think(i))
 			return (NULL);

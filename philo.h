@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:37:18 by vcacador          #+#    #+#             */
-/*   Updated: 2023/09/25 15:14:37 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:44:16 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct s_philo
 typedef struct s_fork
 {
 	int					id;
+	int					forks;
 	pthread_mutex_t		fork;
 }		t_fork;
 
@@ -70,5 +71,9 @@ int 		sleep_op(__useconds_t ms, int id);
 int 		check_dead(int id);
 void		free_all(void);
 int			is_num(char *str);
+int			eat_help_last_philo(int i, int j);
+int			eat_help_philo(int i, int j);
+void		mutex_unlock(int first, int second);
+void		mutex_unlock2(int i, int j);
 
 #endif

@@ -2,6 +2,7 @@ NAME = philo
 
 SRC_NAME =	utils.c				\
 			utils_2.c			\
+			utils_3.c			\
 			eat_sleep_think.c	\
 			structs.c 			\
 			main.c

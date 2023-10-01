@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:30:52 by vcacador          #+#    #+#             */
-/*   Updated: 2023/09/25 15:11:24 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/09/30 17:08:31 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ int	check_dead(int id)
 		if (utils()->dead2 == 0)
 		{	
 			printf("%ld %d died\n", time_now(), id + 1);
+			utils()->dead2 = 1;
 		}
-		utils()->dead2 = 1;
 		pthread_mutex_unlock(&utils()->dead);
 		return (1);
 	}
@@ -75,7 +75,7 @@ void	print_stuff(int id, char *str)
 		return ;
 	}
 	pthread_mutex_lock(&utils()->write);
-	printf("%lu %d %s  \n", time_now(), i, str);
+	printf("%lu %d %s\n", time_now(), i, str);
 	pthread_mutex_unlock(&utils()->write);
 	pthread_mutex_unlock(&utils()->dead);
 }
