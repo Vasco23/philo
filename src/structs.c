@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 15:03:12 by vcacador          #+#    #+#             */
-/*   Updated: 2023/09/25 15:11:03 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:19:44 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	make_structs(void)
 	pthread_mutex_init(&utils()->dead, NULL);
 	*philo() = malloc(sizeof(t_philo) * utils()->n_f);
 	*forks() = malloc(sizeof(t_fork) * utils()->n_f);
-
 	while (++i < utils()->n_f)
 	{
 		pthread_mutex_init(&forks()[0][i].fork, NULL);

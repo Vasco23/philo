@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 15:37:55 by vcacador          #+#    #+#             */
-/*   Updated: 2023/09/25 15:14:20 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:26:36 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int	is_num(char *str)
 	int	i;
 
 	i = -1;
+	if (!*str)
+		return (1);
 	while (str[++i])
 	{
 		if (str[i] < '0' || str[i] > '9')
@@ -42,4 +44,3 @@ int	is_num(char *str)
 	}
 	return (0);
 }
-

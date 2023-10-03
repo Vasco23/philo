@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:30:52 by vcacador          #+#    #+#             */
-/*   Updated: 2023/09/30 17:08:31 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:22:08 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 uint64_t	get_time(void)
 {
-	struct	timeval tv;
+	struct timeval	tv;
 
 	if (gettimeofday(&tv, NULL))
 		return (-1);
@@ -52,7 +52,7 @@ int	check_dead(int id)
 			return (1);
 		}
 		if (utils()->dead2 == 0)
-		{	
+		{
 			printf("%ld %d died\n", time_now(), id + 1);
 			utils()->dead2 = 1;
 		}

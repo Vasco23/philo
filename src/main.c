@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:44:47 by vcacador          #+#    #+#             */
-/*   Updated: 2023/10/01 15:15:12 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:21:04 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,8 @@ void	*f_thread_runs(void *ola)
 		sleep_op(utils()->tte, i);
 	}
 	while (philo()[0][i].eat_t < utils()->tfme && !check_dead(i))
-	{
 		if (eat(i))
 			return (NULL);
-	}
 	return (NULL);
 }
 
@@ -119,7 +117,6 @@ void	c_threads(void)
 	pthread_mutex_destroy(&utils()->write);
 	pthread_mutex_destroy(&utils()->dead);
 }
-
 
 int	main(int ac, char **av)
 {

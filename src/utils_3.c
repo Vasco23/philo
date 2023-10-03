@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 14:41:59 by vcacador          #+#    #+#             */
-/*   Updated: 2023/10/01 15:12:10 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:19:24 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	eat_help_last_philo(int i, int j)
 
 int	eat_help_philo(int i, int j)
 {
-    if (check_dead(i))
+	if (check_dead(i))
 		return (1);
 	pthread_mutex_lock(&forks()[0][i].fork);
 	print_stuff(philo()[0][i].id, "has taken a fork");

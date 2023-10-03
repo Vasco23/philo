@@ -9,7 +9,7 @@ SRC_NAME =	utils.c				\
 
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=thread
+CFLAGS = -Wall -Wextra -Werror -pthread -fsanitize=address
 RM = rm -f
 
 #$(VERBOSE).SILENT:

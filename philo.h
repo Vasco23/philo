@@ -6,7 +6,7 @@
 /*   By: vcacador <vcacador@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 14:37:18 by vcacador          #+#    #+#             */
-/*   Updated: 2023/09/30 16:44:16 by vcacador         ###   ########.fr       */
+/*   Updated: 2023/10/03 17:18:43 by vcacador         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,14 @@ typedef struct s_fork
 	pthread_mutex_t		fork;
 }		t_fork;
 
-
 typedef struct s_utils
 {
-	int					n_f;		//number_of_philosophers
-	int					ttd;		//time_to_die
-	int					tte;		//time_to_eat
-	int					tts;		//time_to_sleep
-	int					tfme;		//[number_of_times_each_philosopher_must_eat]
-	uint64_t 			start;
+	int					n_f;
+	int					ttd;
+	int					tte;
+	int					tts;
+	int					tfme;
+	uint64_t			start;
 	pthread_mutex_t		dead;
 	int					dead2;
 	pthread_mutex_t		write;
@@ -63,12 +62,12 @@ t_fork		**forks(void);
 void		make_structs(void);
 void		print_stuff(int id, char *str);
 uint64_t	get_time(void);
-int 		xonar(int i);
-int 		eat(int i);
+int			xonar(int i);
+int			eat(int i);
 int			think(int i);
-uint64_t 	time_now(void);
-int 		sleep_op(__useconds_t ms, int id);
-int 		check_dead(int id);
+uint64_t	time_now(void);
+int			sleep_op(__useconds_t ms, int id);
+int			check_dead(int id);
 void		free_all(void);
 int			is_num(char *str);
 int			eat_help_last_philo(int i, int j);
